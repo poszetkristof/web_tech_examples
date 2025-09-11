@@ -3,8 +3,22 @@
 - Tar Zoltán: Zoltan_Tar@epam.com
 - Poszet Kristóf: Kristof_Poszet@epam.com
 
-# Követelmények (beta)
+# Gyakorlat:
+1. HTTP alapok: a protokoll használata böngészői fejlesztői eszközökkel (DevTools) és parancssori klienssel (curl), üzenetek felépítése, átirányítások, tartalomegyeztetés
+2. Az XML használata, XML dokumentumok stilizálása CSS-sel
+3. Az XML használata, XML dokumentumok stilizálása CSS-sel
+4. Az XML használata, XML dokumentumok stilizálása CSS-sel
+5. Próbazárthelyi dolgozat. A HTML, CSS és JavaScript használata: HTML alapok (táblázatok)
+6. A HTML, CSS és JavaScript használata: dokumentumok strukturálása
+7. A HTML, CSS és JavaScript használata: űrlapok
+8. A HTML, CSS és JavaScript használata: DOM-fa manipuláció
+9. A Sass CSS előfeldolgozó használata
+10. Reszponzív webdesign a gyakorlatban: flexbox elrendezés, médialekérdezések használata
+11. Reszponzív webdesign a gyakorlatban: rácsos és többhasábos elrendezés
+12. Reszponzív webdesign a gyakorlatban: reszponzív CSS keretrendszerek használata (Bootstrap vagy Tailwind CSS)
+13. Zárthelyi dolgozat
 
+# Követelmények (beta)
 A kurzus teljesítéséhez a félév végén **gyakorlati aláírást** kell szerezni.
 
 ## 📅 Részvétel az órákon
@@ -18,8 +32,6 @@ A kurzus teljesítéséhez a félév végén **gyakorlati aláírást** kell sze
 ### Késési szabályok
 - A terembe a **gyakorlat 20. perce után érkező** hallgatókat hiányzóknak tekintjük
 - Óra közben **tilos a teremből ki-be járkálni** 
-  - Ez zavarja a tanítást és udvariatlan viselkedés
-  - A gyakorlatvezető hiányzóként könyvelheti el
 - A hiányzóként elkönyvelt hallgatók **a teremben maradhatnak**
 
 ### Pótlási lehetőség
