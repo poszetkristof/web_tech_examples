@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- A színdarab elem felépítése: pontosan egy author, egy title, majd 0 vagy több act -->
+<!ELEMENT play (author, title, act*)>
+
+<!-- Az "author" elem csak szöveget tartalmaz (#PCDATA = Parsed Character Data) -->
+<!ELEMENT author (#PCDATA)>
+
+<!-- A "title" elem csak szöveget tartalmaz -->
+<!ELEMENT title (#PCDATA)>
+
+<!-- Egy felvonás tartalma: egy title és 0 vagy több scene -->
+<!ELEMENT act (title, scene*)>
+
+<!-- Egy jelenet tartalma: egy cím és utána tetszőleges számú beszédek vagy rendezői utasítások vegyesen -->
+<!ELEMENT scene (title, (speech | stagedir)*)>
+
+<!-- A színpadi utasítás csak szöveget tartalmaz -->
+<!ELEMENT stagedir (#PCDATA)>
+
+<!-- Egy szereplő beszéde: először egy speaker, majd 0 vagy több szövegsor vagy rendezői utasítások -->
+<!ELEMENT speech (speaker, (line | stagedir)*)>
+
+<!-- A "speaker" (megszólaló neve) csak szöveget tartalmaz -->
+<!ELEMENT speaker (#PCDATA)>
+
+<!-- Egy "line" tartalmazhat szöveget és/vagy rendezői utasításokat beágyazva, bármilyen sorrendben, ismételve -->
+<!ELEMENT line (#PCDATA | stagedir)*>
