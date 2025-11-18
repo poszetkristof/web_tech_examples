@@ -1,0 +1,6 @@
+@use "sudoku";
+
+// TODO: Definiálj egy placeholder-t a diagonális cellákhoz
+
+// TODO: Generálj szabályokat a diagonális cellákhoz (@for ciklus)
+// Tipp: főátló → nth-child($i), mellékátló → nth-child(10 - $i)
