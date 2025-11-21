@@ -1,8 +1,19 @@
-@use "util";
-@use "dancing-letters";
+@use "util"; // choose() és random() függvényekhez
+@use "dancing-letters"; // Alap stílusok importálása
 
-// TODO: Definiálj egy színlistát
+// Sass lista: vesszővel elválasztott értékek
+$rainbow: red, orange, yellow, green, blue, indigo, violet;
 
-// TODO: Generálj stílusokat minden betűhöz (@for ciklus)
-// - Véletlen szín a listából
-// - Véletlen forgatás -15 és 15 fok között
+.dancing-letters {
+  @for $i from 1 through 16 {
+    // #{$i} = változó interpoláció
+    & > span:nth-child(#{$i}) {
+      // util.choose($rainbow) → véletlen szín a listából
+      // Lehet ugyanaz a szín többször is!
+      background-color: util.choose($rainbow);
+
+      // Véletlen forgatás -15° és 15° között
+      transform: rotate((util.random(-15, 15)) + deg);
+    }
+  }
+}

@@ -6,6 +6,25 @@ body {
 
 table.sudoku {
   border: medium solid black;
-  border-collapse: collapse;
-  margin: auto;
+  border-collapse: collapse; // Cellák keretei összeolvadnak
+  margin: auto; // Vízszintes középre (flexbox miatt!)
+
+  // Cellák
+  td {
+    border: thin solid lightgray;
+    height: 3rem;
+    text-align: center;
+    vertical-align: middle; // Szöveg függőleges középre
+    width: 3rem;
+  }
+
+  // nth-child(3n) = minden 3. elem (3, 6, 9)
+  td:nth-child(3n) {
+    border-right: medium solid black; // Jobb oldali keret vastagítása
+  }
+
+  // nth-child(3n) = minden 3. sor (3, 6, 9)
+  tr:nth-child(3n) {
+    border-bottom: medium solid black; // Alsó keret vastagítása
+  }
 }

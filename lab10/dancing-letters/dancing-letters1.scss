@@ -1,7 +1,24 @@
-@use "sass:math";
-@use "util";
-@use "dancing-letters";
+// Modulok importálása
+@use "sass:math"; // math.random() használatához
+@use "util"; // Saját utility függvények (random, choose)
+@use "dancing-letters"; // Alap stílusok importálása
 
-// TODO: Generálj stílusokat minden betűhöz (@for ciklus)
-// - Véletlen RGB háttérszín
-// - Véletlen forgatás -15 és 15 fok között
+.dancing-letters {
+  // "Sass is wonderful!" = 16 karakter (szóközök nélkül)
+  @for $i from 1 through 16 {
+    // #{$i} = string interpolation (változó beillesztése CSS-be)
+    & > span:nth-child(#{$i}) {
+      // math.random(256) → 1-256 közötti szám
+      // -1 azért kell, mert RGB: 0-255 tartomány!
+      background-color: rgb(
+        math.random(256) - 1,
+        math.random(256) - 1,
+        math.random(256) - 1
+      );
+
+      // util.random(-15, 15) → -15 és 15 fok között
+      // + deg → string összefűzés: "12" + "deg" = "12deg"
+      transform: rotate(util.random(-15, 15) + deg);
+    }
+  }
+}

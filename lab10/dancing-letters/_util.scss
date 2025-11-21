@@ -1,5 +1,21 @@
-@use "sass:list";
-@use "sass:math";
+@use "sass:list"; // Lista műveletek (nth, length, stb.)
+@use "sass:math"; // Matematikai műveletek (random, round, stb.)
 
-// TODO: Implementáld a random($min, $max) függvényt
-// Adjon vissza egy véletlen egész számot $min és $max között
+
+@function random($min, $max) {
+    @if ($min > $max) {
+        @error "Invalid arguments: $min must be less or equal to $max"
+    }
+   
+    @return math.random(($max - $min) + 1) + $min - 1;
+}
+
+// Véletlen elem kiválasztása egy listából
+@function choose($list) {
+  // list.nth($list, index) → elem kiválasztása index alapján
+  @return list.nth($list, math.random(list.length($list)));
+}
+
+// lásd a debug eredményét a terminálban
+@debug random(1, 5);
+@debug choose(apple banana cherry);

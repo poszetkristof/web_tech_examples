@@ -1,6 +1,21 @@
-@use "sudoku";
+@use "sudoku"; // Alap Sudoku stílusok importálása
 
-// TODO: Definiálj egy placeholder-t a diagonális cellákhoz
+// Placeholder: újrafelhasználható stílus (nem jelenik meg önállóan a CSS-ben)
+// % prefix = placeholder (nem generál CSS szabályt magában)
+%diagonal {
+  background-color: gold;
+}
 
-// TODO: Generálj szabályokat a diagonális cellákhoz (@for ciklus)
-// Tipp: főátló → nth-child($i), mellékátló → nth-child(10 - $i)
+table.sudoku {
+  // @for ciklus: 9 sor → 9 átlós cella mindkét átlón
+  @for $i from 1 through 9 {
+    // Két selektor egyszerre (vesszővel elválasztva):
+    // 1. Főátló: i-edik sor, i-edik oszlop
+    // 2. Mellékátló: i-edik sor, (10-i)-edik oszlop
+    tr:nth-child(#{$i}) > td:nth-child(#{$i}),      // Főátló
+        tr:nth-child(#{$i}) > td:nth-child(#{10 - $i})  // Mellékátló
+    {
+      @extend %diagonal;
+    }
+  }
+}
