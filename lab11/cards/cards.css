@@ -1,0 +1,17 @@
+body {
+  background-color: green;
+}
+
+.card {
+  background-color: white;
+  border: medium solid black;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Adding card ranks: */
+
+/* Adding card suits: */
+
+/* Setting the color of the cards: */

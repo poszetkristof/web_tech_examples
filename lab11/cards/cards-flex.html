@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Playing Cards</title>
+    <link rel="stylesheet" href="cards-flex.css" />
+  </head>
+  <body>
+    <!-- Kártyák konténere (flexbox layouthoz) -->
+    <div class="cards">
+      <!-- Pikk Ász - data-* attribútumok: egyedi adatok tárolása HTML-ben -->
+      <!-- data-suit: kártya színe (spades=pikk, hearts=kőr, clubs=treff, diamonds=káró) -->
+      <!-- data-rank: kártya értéke (A=ász) -->
+      <div class="card" data-suit="spades" data-rank="A">
+        <!-- Bal felső sarok: érték + szín szimbólum -->
+        <span class="topLeft">
+          <span class="rank"></span>
+          <!-- CSS ::before-rel töltődik fel: "A" -->
+          <br />
+          <span class="suit"></span>
+          <!-- CSS ::before-rel töltődik fel: "♠" -->
+        </span>
+
+        <!-- Középső nagy szimbólum -->
+        <span class="center suit"></span>
+        <!-- CSS ::before: "♠" -->
+
+        <!-- Jobb alsó sarok: érték + szín (180°-kal elforgatva) -->
+        <span class="bottomRight">
+          <span class="rank"></span>
+          <!-- "A" -->
+          <br />
+          <span class="suit"></span>
+          <!-- "♠" -->
+        </span>
+      </div>
+
+      <!-- Kőr Ász -->
+      <div class="card" data-suit="hearts" data-rank="A">
+        <span class="topLeft">
+          <span class="rank"></span>
+          <!-- "A" -->
+          <br />
+          <span class="suit"></span>
+          <!-- "♥" -->
+        </span>
+        <span class="center suit"></span>
+        <!-- "♥" -->
+        <span class="bottomRight">
+          <span class="rank"></span>
+          <br />
+          <span class="suit"></span>
+        </span>
+      </div>
+
+      <!-- Treff Ász -->
+      <div class="card" data-suit="clubs" data-rank="A">
+        <span class="topLeft">
+          <span class="rank"></span>
+          <!-- "A" -->
+          <br />
+          <span class="suit"></span>
+          <!-- "♣" -->
+        </span>
+        <span class="center suit"></span>
+        <!-- "♣" -->
+        <span class="bottomRight">
+          <span class="rank"></span>
+          <br />
+          <span class="suit"></span>
+        </span>
+      </div>
+
+      <!-- Káró Ász -->
+      <div class="card" data-suit="diamonds" data-rank="A">
+        <span class="topLeft">
+          <span class="rank"></span>
+          <!-- "A" -->
+          <br />
+          <span class="suit"></span>
+          <!-- "♦" -->
+        </span>
+        <span class="center suit"></span>
+        <!-- "♦" -->
+        <span class="bottomRight">
+          <span class="rank"></span>
+          <br />
+          <span class="suit"></span>
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
