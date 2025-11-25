@@ -1,0 +1,10 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+table.scrabble {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}

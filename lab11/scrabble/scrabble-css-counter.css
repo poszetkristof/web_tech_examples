@@ -1,0 +1,18 @@
+@import "scrabble.css";
+
+/* Auto-numbering of the rows: */
+
+table.scrabble > tbody {
+  counter-reset: row-number;
+}
+
+table.scrabble > tbody > tr {
+  /* ??? */
+}
+
+table.scrabble > tbody th::after {
+  /* ??? */
+}
+
+/* Auto-numbering of the columns: */
+/* ??? */
