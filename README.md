@@ -2,6 +2,14 @@
 
 > Más órák/laborok: https://github.com/ZoltiTar/web-tech-examples
 
+## LAB11: Flexbox és Grid
+
+### EPAM campus programok
+
+- [link a campus portálhoz](https://campus.epam.com/en/training?filter=%7B%22Locations%22%3A%5B57%5D%7D)
+- aki elvégzi a `Specialization` programok valamelyikét, az eléri azt a szintet, amire építve már fel tudjuk venni, ha van demand a mi oldalunkon
+  - tehát nem 100%, de jelenleg elég nagy az esély rá
+
 ## LAB 10: Sass és Flexbox (nov. 20.)
 
 ### Sass Telepítés és Használat
