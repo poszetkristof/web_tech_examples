@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>dungeon-assignment_hu</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="feladat">Feladat</h1>
+<p>Készíts egy HTML-dokumentumot és egy CSS- vagy SCSS-stíluslapot egy
+földalatti kalandjáték felhasználói felületének megjelenítéséhez.</p>
+<p>Így kell, hogy kinézzen a játék felülete a böngészőben:</p>
+<p><img src="dungeon-assignment.png" /></p>
+<p>A felület körül körbefutó kékes terület és a nyomógombok közötti
+hézag szélessége is <code>1rem</code> kell, hogy legyen. A kékes hátterű
+külső elem szorosan kell, hogy közrefogja a tartalmazott elemeket
+(<code>width: fit-content</code>).</p>
+<p>Az ábrán középen fehér színnel jelölt területet foglalja el a játék
+egy jelenete. A jelenetet egy olyan táblázat kell, hogy ábrázolja,
+amelynek <strong>11 sora és oszlopa</strong> van.</p>
+<p>Valamennyi cella <strong>ugyanolyan széles és magas</strong> kell,
+hogy legyen. A cellák mindegyikéhez egy alkalmas (fehértől különböző!)
+háttérszínt kell beállítani:</p>
+<ul>
+<li><p>Az első/utolsó sor/oszlop cellái falakat ábrázolnak, amelyeket
+fekete háttérszínnel kell megjeleníteni.</p></li>
+<li><p><strong>25 vagy több</strong> további belső cella ábrázoljon
+ugyancsak fekete háttérszínnel megjelenő falakat. Úgy kell a falakat
+elhelyezni, hogy az eredmény egy földalatti kazamatarendszerre
+hasonlítson.</p></li>
+<li><p>A többi cellához <strong>két vagy több</strong> olyan különböző
+háttérszínt kell beállítani, amelyek az aktuális terepviszonyokat
+(például kőpadló, víz) tükrözik.</p></li>
+</ul>
+<p>A táblázat nem fal celláit <a href="https://emojipedia.org/">itt</a>
+található Unicode emoji szimbólumokkal kell feltölteni az alábbiak
+szerint:</p>
+<ul>
+<li><p><strong>10 vagy több</strong> nem fal cella egy szörnyet ábrázoló
+szimbólumot kell, hogy tartalmazzon. Kétféle szörnyet kell használni
+(például denevér és pók), mindkét fajtából ugyanannyi legyen. A
+szörnyekhez <a href="https://emojipedia.org/nature">itt</a> válassz két
+szimbólumot.</p></li>
+<li><p><strong>5 vagy több</strong> cella egy bizonyos tárgyat (például
+gyémánt, régi kulcs) ábrázoló szimbólumot kell, hogy tartalmazzon (<a
+href="https://emojipedia.org/objects">itt</a> válassz egyet).</p></li>
+<li><p><strong>1</strong> cella egy főhőst ábrázoló
+<strong>egyedi</strong> szimbólumot (mint például egy <a
+href="https://emojipedia.org/man-standing">álló férfi</a>) kell, hogy
+tartalmazzon. Az egyediség azt jelenti, hogy ez a szimbólum csak egyszer
+szerepelhet a táblázatban.</p></li>
+</ul>
+<p>Az eredmény úgy kell, hogy kinézzen, mint egy földalatti
+kazamatarendszer, ráadásul legyen esztétikus is.</p>
+<p>A HTML-dokumentumnak tartalmazni kell egy, a <strong>teljes
+nevedet</strong> és a <strong>Neptunkódodat</strong> tartalmazó alkalmas
+elemet is, amelyet meg is jelenít a böngésző.</p>
+<h2 id="követelmények">Követelmények</h2>
+<ul>
+<li><p><strong>Tilos a HTML-dokumentumban a <code>style</code>
+attribútum használata.</strong> A könnyű karbantarthatóságához a
+dokumentum stilizálása a <code>class</code> attribútum használatán kell,
+hogy alapuljon. Kivételt képeznek az egyedi szimbólumok cellái, ezek
+stilizálása történhet az <code>id</code> és a <code>class</code>
+attribútum együttes használatán.</p></li>
+<li><p><strong>Tilos a HTML-dokumentumban Unicode emoji szimbólumok
+közvetlen megadása.</strong> Ezek kizárólag a CSS-stíluslapon adhatók
+meg a <code>content</code> tulajdonság értékében. Valamennyi Unicode
+emoji szimbólum megadható literálisan vagy a <strong>hexadecimális
+kódpontjával</strong>.</p></li>
+<li><p><strong>Elutasításra kerülnek (0 pontot érnek) az olyan
+megoldások, amelyek nem a <code>class</code> attribútum használatán
+alapulnak.</strong></p></li>
+<li><p>A megoldásban a megfelelő HTML-elemeket kell használni a
+megfelelő módon. Például nem használhatók a nyomógombok ábrázolásához
+<code>&lt;div&gt;</code> elemek.</p></li>
+<li><p>A felület felső és alsó részének elrendezéséhez is a Flexboxot
+kötelező használni.</p></li>
+<li><p>A forráskódot megfelelően kell formázni, hogy jól átlátható
+legyen.</p></li>
+</ul>
+<h2 id="tippek">Tippek</h2>
+<ul>
+<li><p>Ne feledd, hogy a <code>class</code> HTML-attribútum osztálynevek
+egy szóközökkel elválasztott listáját tartalmazhatja, mint például
+<code>&lt;td class="swamp frog highlight"&gt;</code>.</p></li>
+<li><p>A <code>class</code> attribútum értékében használj beszédes
+osztályneveket.</p></li>
+<li><p>A kiválasztókban több osztály-kiválasztó is használható, mint
+például <code>td.swamp.frog</code>.</p></li>
+<li><p>Használd a
+<kbd><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd></kbd> billentyűket a
+forráskód formázásához (<em>Format Document</em>).</p></li>
+<li><p>Ha a Visual Studio Code-ban egy CSS-tulajdonság nevére mutatsz az
+egérrel, akkor egy <em>pop-up</em> jelenik meg a tulajdonság rövid
+leírásával, ahol az <em>MDN Reference</em> linkre kattintva a
+tulajdonság MDN oldalára lehet navigálni.</p></li>
+</ul>
+<h2 id="megoldás-feltöltése">Megoldás feltöltése</h2>
+<ul>
+<li><p>Az alábbi <strong>két állományt</strong> kell feltölteni
+megoldásként:</p>
+<ul>
+<li>Egy <code>.html</code> kiterjesztésű HTML-dokumentumot.</li>
+<li>Ha nem használsz Sass-t, akkor egy <code>.css</code> kiterjesztésű
+CSS-stíluslapot. Ha Sass-t használsz, akkor pedig egy <code>.scss</code>
+kiterjesztésű SCSS-stíluslapot.</li>
+</ul></li>
+<li><p>A három állomány összecsomagolható egyetlen ZIP állományba, de ez
+nem kötelező.</p></li>
+<li><p>A Moodle nem enged kettőnél több állományt feltölteni.</p></li>
+</ul>
+<h2 id="megengedett-segítség">Megengedett segítség</h2>
+<p>Kizárólag az alábbi webhelyek használhatók:</p>
+<ul>
+<li><p>A megoldás feltöltésére szolgáló Moodle tevékenység.</p></li>
+<li><p><a href="https://developer.mozilla.org/en-US/">MDN Web
+Docs</a></p>
+<ul>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML:
+HyperText Markup Language</a></p>
+<ul>
+<li><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML
+elements reference</a></li>
+</ul></li>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS:
+Cascading Style Sheets</a></p>
+<ul>
+<li><a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS
+reference</a></li>
+<li><a
+href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
+</ul></li>
+</ul></li>
+<li><p>Az órai feladatok megoldásai innen: <a
+href="https://arato.inf.unideb.hu/jeszenszky.peter/webtech/lab/"
+class="uri">https://arato.inf.unideb.hu/jeszenszky.peter/webtech/lab/</a></p></li>
+</ul>
+<h2 id="értékelés">Értékelés</h2>
+<ul>
+<li><p>A középső rész 4%-ot ér: 2% szerezhető a HTML-kódra és 2% a
+CSS-kódra.</p></li>
+<li><p>A felső és alsó rész is 2%-ot ér: 1% szerezhető a HTML-kódra és
+1% a CSS-kódra.</p></li>
+</ul>
+</body>
+</html>

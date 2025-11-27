@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>dungeon-assignment_en</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="assignment">Assignment</h1>
+<p>Create an HTML document and a CSS or SCSS stylesheet to display the
+user interface for a hypothetical dungeon game.</p>
+<p>The user interface of the game must be presented in the browser as
+follows:</p>
+<p><img src="dungeon-assignment.png" /></p>
+<p>The bluish space around the user interface and also the gap between
+the buttons must be <code>1rem</code> exactly. The outer element with
+the grayish background must tightly wrap the inner elements
+(<code>width: fit-content</code>).</p>
+<p>A game scene must be shown in the white area in the middle. The game
+scene must be represented as a table with <strong>11 rows and
+columns</strong>.</p>
+<p>All cells must have the <strong>same width and height</strong>. Each
+of the cells must have a suitable background color (that can’t be
+white!):</p>
+<ul>
+<li><p>The cells of the first and the last row, and also the first and
+the last column represent walls whose background color must be set to
+black.</p></li>
+<li><p><strong>25 or more</strong> inner cells must also represent walls
+shown in black. You must add the inner wall cells to create a
+dungeon-like structure.</p></li>
+<li><p>For the remaining cells, you must use <strong>two or
+more</strong> different background colors to represent different terrain
+conditions (e.g., stone, water).</p></li>
+</ul>
+<p>The non-wall cells of the table must be populated with Unicode emoji
+symbols taken from <a href="https://emojipedia.org/">here</a> as
+follows:</p>
+<ul>
+<li><p><strong>10 or more</strong> non-wall cells must contain a symbol
+representing a monster of two kinds. You must use two different symbols
+(e.g., bat and spider), and each must occur the same number of times.
+Pick two symbols from <a
+href="https://emojipedia.org/nature">here</a>.</p></li>
+<li><p><strong>5 or more</strong> non-wall cells must contain a symbol
+representing a specific object (e.g., a gemstone or an old key) (pick
+one from <a href="https://emojipedia.org/objects">here</a>).</p></li>
+<li><p><strong>One non-wall cell</strong> must contain a
+<strong>unique</strong> symbol representing a hero, e.g., a <a
+href="https://emojipedia.org/man-standing">man standing</a>. Unique
+means that the symbol must occur only once in the table.</p></li>
+</ul>
+<p>The resulting scene should look like an underground and look
+thrilling.</p>
+<p>The HTML document must also contain a suitable element that includes
+your full name and <strong>Neptun ID</strong>, these elements must be
+shown in the browser.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><p><strong>It is forbidden to use the <code>style</code> attribute
+in the HTML document.</strong> To provide a solution that is easy to
+maintain, styling must be based on the <code>class</code> attribute. The
+cells of the unique symbols are exceptions; for these, you can also use
+the <code>id</code> attribute alongside the <code>class</code>
+attribute.</p></li>
+<li><p><strong>It is forbidden to include Unicode emoji symbols directly
+in the HTML document.</strong> Instead, they must be specified
+exclusively in the CSS stylesheet in the value of the
+<code>content</code> CSS property. All the Unicode emoji symbols can be
+referenced either literally or by their <strong>hexadecimal code
+point</strong>.</p></li>
+<li><p><strong>Solutions that are not based on the use of the
+<code>class</code> attribute are rejected.</strong></p></li>
+<li><p>Solutions must use the proper HTML elements the right way. For
+example, you can’t use <code>&lt;div&gt;</code> elements to represent
+buttons, since HTML provides an element to represent buttons.</p></li>
+<li><p>The layout of the top and the bottom parts must be based on the
+use of Flexbox.</p></li>
+<li><p>Source code must be appropriately indented.</p></li>
+</ul>
+<h2 id="hints">Hints</h2>
+<ul>
+<li><p>Note that the <code>class</code> HTML attribute can contain a
+space-separated list of class names, such as
+<code>&lt;td class="swamp frog highlight"&gt;</code>.</p></li>
+<li><p>You must use meaningful class names.</p></li>
+<li><p>Selectors can also contain multiple class-selectors, such as
+<code>td.swamp.frog</code>.</p></li>
+<li><p>Source code can be formatted with the
+<kbd><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd></kbd> command (i.e.,
+<em>Format Document</em>).</p></li>
+<li><p>Note that when you position the mouse pointer over the name of a
+property in a CSS stylesheet in Visual Studio Code, the editor shows a
+pop-up, where you can click on <em>MDN Reference</em> to navigate to the
+MDN page of the property.</p></li>
+</ul>
+<h2 id="submission">Submission</h2>
+<ul>
+<li><p>You must submit the following <strong>two files</strong>:</p>
+<ul>
+<li>An HTML document with the <code>.html</code> file extension.</li>
+<li>If you don’t use Sass, a CSS stylesheet with the <code>.css</code>
+file extension. Otherwise, if you use Sass, an SCSS style sheet with the
+<code>.scss</code> file extension.</li>
+</ul></li>
+<li><p>You may pack the two files into a ZIP archive; however, it is not
+mandatory. Archive formats other than ZIP are rejected.</p></li>
+<li><p>Note that Moodle won’t let you submit more than two
+files.</p></li>
+</ul>
+<h2 id="allowed-help">Allowed Help</h2>
+<p>You can access only the following websites:</p>
+<ul>
+<li><p>The Moodle activity to submit the solution.</p></li>
+<li><p><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a>
+(You must use the English version of MDN pages!)</p>
+<ul>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML:
+HyperText Markup Language</a></p>
+<ul>
+<li><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML
+elements reference</a></li>
+</ul></li>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS:
+Cascading Style Sheets</a></p>
+<ul>
+<li><a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS
+reference</a></li>
+<li><a
+href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
+</ul></li>
+</ul></li>
+<li><p>The solutions for the classroom assignments from here: <a
+href="https://arato.inf.unideb.hu/jeszenszky.peter/webtech/lab/"
+class="uri">https://arato.inf.unideb.hu/jeszenszky.peter/webtech/lab/</a></p></li>
+</ul>
+<h2 id="scoring">Scoring</h2>
+<ul>
+<li><p>The middle part is worth 4%: 2% can be obtained for both the HTML
+and the CSS code.</p></li>
+<li><p>Both the top and the bottom parts are worth 2%: 1% can be
+obtained for both the HTML and the CSS code.</p></li>
+</ul>
+</body>
+</html>
