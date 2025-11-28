@@ -1,14 +1,107 @@
 body {
+  align-items: center;
+  display: flex;
   font-family: sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
 }
 
 #grid {
+  aspect-ratio: 4 / 5;
   background-color: #ddd;
   border: 4px solid #555;
   box-sizing: border-box;
+  display: grid;
+  gap: 4px;
+  grid-template-areas:
+    "A A A B" /* Row 1 */
+    "C C D E" /* Row 2 */
+    "F . G E" /* Row 3 */
+    "F H H E" /* Row 4 */
+    "I J J K" /* Row 5 */;
+  grid-template-columns: repeat(4, 1fr) /* 1fr 1fr 1fr 1fr */;
+  grid-template-rows: repeat(5, 1fr) /* 1fr 1fr 1fr 1fr 1fr */;
+  height: 50vh;
+  padding: 4px;
 }
 
 #grid > div {
+  align-items: center;
   border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
   border: 2px solid #555;
+}
+
+#grid > div::before {
+  content: attr(class);
+}
+
+.coral {
+  background-color: coral;
+}
+
+.lavender {
+  background-color: lavender;
+}
+
+.lightgreen {
+  background-color: lightgreen;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.plum {
+  background-color: plum;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+#lavender {
+  grid-area: A;
+}
+
+#yellow1 {
+  grid-area: B;
+}
+
+#yellow2 {
+  grid-area: D;
+}
+
+#yellow3 {
+  grid-area: G;
+}
+
+#yellow4 {
+  grid-area: K;
+}
+
+#lightgreen1 {
+  grid-area: C;
+}
+
+#lightgreen2 {
+  grid-area: H;
+}
+
+#lightgreen3 {
+  grid-area: J;
+}
+
+#pink {
+  grid-area: E;
+}
+
+#plum {
+  grid-area: F;
+}
+
+#coral {
+  grid-area: I;
 }

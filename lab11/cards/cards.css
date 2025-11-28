@@ -8,10 +8,59 @@ body {
   border-radius: 0.5rem;
   box-sizing: border-box;
   font-family: sans-serif;
+  height: 3.5in;
+  width: 2.5in;
 }
 
-/* Adding card ranks: */
+/* Attribútum szelektor: kiválasztja azokat a kártyákat, amelyeknek data-rank="A" */
+/* ::before pseudo-elem: tartalmat szúr be a span.rank elemek elé */
+.card[data-rank="A"] span.rank::before {
+  content: "A";
+}
 
-/* Adding card suits: */
+/* Pikk (♠) - Unicode: U+2660 */
+.card[data-suit="spades"] span.suit::before {
+  content: "\2660";
+}
 
-/* Setting the color of the cards: */
+/* Treff (♣) - Unicode: U+2663 */
+.card[data-suit="clubs"] span.suit::before {
+  content: "\2663";
+}
+
+/* Kőr (♥) - Unicode: U+2665 */
+.card[data-suit="hearts"] span.suit::before {
+  content: "\2665";
+}
+
+/* Káró (♦) - Unicode: U+2666 */
+.card[data-suit="diamonds"] span.suit::before {
+  content: "\2666";
+}
+
+/* :is() pszeudo-osztály: több szelektor kombinálása (rövidebb mint a vessző) */
+.card:is([data-suit="clubs"], [data-suit="spades"]) {
+  color: black;
+}
+
+.card:is([data-suit="diamonds"], [data-suit="hearts"]) {
+  color: red;
+}
+
+/* :is() itt is: bal felső ÉS jobb alsó sarok azonos stílussal */
+/* Szóköz a .card után: leszármazott szelektor (bármilyen mélységben) */
+.card :is(.topLeft, .bottomRight) {
+  display: inline-block; /* inline-block kell a transform-hoz */
+  font-size: 200%; /* Nagyobb betűméret (2x) */
+  padding: 0.25rem;
+  text-align: center;
+}
+
+.card .center {
+  font-size: 400%;
+}
+
+/* Jobb alsó sarok: fejjel lefelé (180 fokkal elforgatva) */
+.card .bottomRight {
+  transform: rotate(180deg);
+}
