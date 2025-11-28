@@ -2,12 +2,6 @@
 
 > Más órák/laborok: https://github.com/ZoltiTar/web-tech-examples
 
-> EPAM campus programok
-
-- [link a campus portálhoz](https://campus.epam.com/en/training?filter=%7B%22Locations%22%3A%5B57%5D%7D)
-- aki elvégzi a `Specialization` programok valamelyikét, az eléri azt a szintet, amire építve már fel tudjuk venni, ha van demand a mi oldalunkon
-  - tehát nem 100%, de jelenleg elég nagy az esély rá
-
 ## LAB12-re gyakorló feladatok
 
 _Ezek opcionális házi feladatok a következő laborra, próbáljátok megoldani önállóan._
@@ -113,3 +107,9 @@ Funkciók:
 - Dinamikus elemek hozzáadása
 - Flexbox tulajdonságok élőben módosítása (`flex-direction`, `justify-content`, `align-items`, `flex-wrap`)
 - Vizuális tengelyek (X/Y) megjelenítése
+
+> EPAM campus programok
+
+- [link a campus portálhoz](https://campus.epam.com/en/training?filter=%7B%22Locations%22%3A%5B57%5D%7D)
+- aki elvégzi a `Specialization` programok valamelyikét, az eléri azt a szintet, amire építve már fel tudjuk venni, ha van demand a mi oldalunkon
+  - tehát nem 100%, de jelenleg elég nagy az esély rá
