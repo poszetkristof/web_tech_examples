@@ -2,13 +2,43 @@
 
 > Más órák/laborok: https://github.com/ZoltiTar/web-tech-examples
 
-## LAB11: Flexbox és Grid
-
-### EPAM campus programok
+> EPAM campus programok
 
 - [link a campus portálhoz](https://campus.epam.com/en/training?filter=%7B%22Locations%22%3A%5B57%5D%7D)
 - aki elvégzi a `Specialization` programok valamelyikét, az eléri azt a szintet, amire építve már fel tudjuk venni, ha van demand a mi oldalunkon
   - tehát nem 100%, de jelenleg elég nagy az esély rá
+
+## LAB12-re gyakorló feladatok
+
+_Ezek opcionális házi feladatok a következő laborra, próbáljátok megoldani önállóan._
+
+1. **Tavalyi ZH**: [dungeon-assignment](https://github.com/poszetkristof/web_tech_examples/tree/main/lab11/zh-2024)
+
+2. **Scrabble gyakorlás**: [link](https://github.com/poszetkristof/web_tech_examples/tree/main/lab11/scrabble)
+
+---
+
+## LAB11: Flexbox és Grid (nov. 27.)
+
+_Megj: a megoldások elérhetőek ZIP formátumban. [lab11Solutions.zip](https://github.com/poszetkristof/web_tech_examples/blob/main/lab11/lab11Solutions.zip)_
+
+### Flexbox témakör
+
+1. feladat: [flexbox-playground](https://github.com/poszetkristof/web_tech_examples/tree/main/lab11/flexbox-playground)
+
+   - _Megj: nov 20-án kezdtük el, nov 27-én fejeztük be._
+
+2. feladat: [cards](https://github.com/poszetkristof/web_tech_examples/tree/main/lab11/cards)
+
+3. feladat: [flexbox-image-gallery](https://github.com/poszetkristof/web_tech_examples/tree/main/lab11/flexbox-image-gallery)
+
+### CSS Grid témakör
+
+4. feladat: [grid-image-gallery](https://github.com/poszetkristof/web_tech_examples/tree/main/lab11/grid-image-gallery)
+
+5. feladat: [grid-puzzle](https://github.com/poszetkristof/web_tech_examples/tree/main/lab11/grid-puzzle)
+
+---
 
 ## LAB 10: Sass és Flexbox (nov. 20.)
 
@@ -83,5 +113,3 @@ Funkciók:
 - Dinamikus elemek hozzáadása
 - Flexbox tulajdonságok élőben módosítása (`flex-direction`, `justify-content`, `align-items`, `flex-wrap`)
 - Vizuális tengelyek (X/Y) megjelenítése
-
----
